@@ -45,15 +45,17 @@ const user2:User={
 }
 
 //Boolean
-
 type isAdmin=boolean;
 const admin:isAdmin=true;
 
 //String
-
 type Name=string;
 const myName:Name="Maisha"
 
+//Function
+type AddFunc=(num1:number,num2:number)=>number
+const add:AddFunc=(num1,num2)=>num1+num2;
+ 
 
 
 
