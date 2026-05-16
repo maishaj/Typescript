@@ -11,20 +11,19 @@ class BankAccount{
         this.userInfo=userInfo;
     }
 
-    addBalance(balance:number){
-        return this.userBalance=this.userBalance+balance;
+    // Set
+    set newBalance(amount:number){
+        this.userBalance=this.userBalance+amount;
+    }
+
+    // Get
+    get getBalance(){
+        return this.userBalance;
     }
 }
 
 const mezbaBhaiAccount=new BankAccount(111,"Mezba",20,"info");
-//mezbaBhaiAccount.userId=112; - Not Possible
-mezbaBhaiAccount.addBalance(100);
+
+mezbaBhaiAccount.newBalance=800;  //adding 800 to previous value
 console.log(mezbaBhaiAccount);
-
-class Demo extends BankAccount{
-    test(){
-        this.userInfo;     //this.userBalance cannot be accessed because it is private.
-    }
-}
-
 
